@@ -177,6 +177,7 @@ void merge(int array[], int* left, int left_size, int* right, int right_size) {
         }
     }
 
+    // 多余部门直接最加赋值就可以
     while (i<left_size) {
         array[k++] = left[i++];
     }

@@ -49,12 +49,12 @@ int binary_search(int array[], int length, int search) {
 }
 
 int main(int argc, char* argv[]) {
-    int array[] = {1, 3, 5, 8, 10, 11, 12, 20, 23, 26, 40, 80, 100};
+    int array[] = {1, 3, 8, 10, 11, 12, 26, 40, 80, 100};
     int length = sizeof(array) / sizeof(*array);
     cout << length << endl;
 
-    cout << binary_search(array, length, 0, length -1, 20) << endl;
-    cout << binary_search(array, length, 20) << endl;
+    cout << binary_search(array, length, 0, length -1, 11) << endl;
+    cout << binary_search(array, length, 11) << endl;
 
     return 0;
 }
