@@ -13,6 +13,7 @@ int main() {
     int* array = (int*) malloc(sizeof(int));
 
     free(array);
+    //free(array);
 
     return 0;
 }

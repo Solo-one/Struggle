@@ -64,10 +64,10 @@ int binary_search_1(int array[], int length, int start, int end, int search) {
         if (search == array[mid]) {
             return mid;
         }
-        if (search == (-array[mid+1])) {
+        if (search == -array[mid+1]) {
             return mid+1;
         }
-        if (search == (-array[mid-1])) {
+        if (search == -array[mid-1]) {
             return mid-1;
         }
     }
