@@ -13,11 +13,12 @@ struct TreeNode {
     TreeNode(int arg) : val(arg), left(NULL), right(NULL) {}
 };
 
+// 104、二叉树的最大深度  
 int max_depth(TreeNode* root) {
     if (root == NULL) return 0;
 
-    int left_height = max_depth(root.left);
-    int right_height = max_depth(root.right);
+    int left_height = max_depth(root->left);
+    int right_height = max_depth(root->right);
 
     return Math.max(left_height, right_height) + 1;
 

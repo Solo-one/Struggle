@@ -37,6 +37,17 @@ vector<int> preorderTraversal(TreeNode* root) {
     return vec;
 }
 
+// 前序递归
+void preorderTraversal_1(TreeNode* root, vector<int>& ret) {
+    TreeNode* cur = root;
+    if (cur != NULL) {
+        ret.push_back(cur->val);
+        preorderTraversal_1(cur->left, ret); 
+        preorderTraversal_1(cur->right, ret); 
+    }
+}
+
+
 // 二叉树后续遍历
 vector<int> postorderTraversal(TreeNode* root) {
     std::stack<TreeNode*> stack;
