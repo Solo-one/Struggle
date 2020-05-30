@@ -8,6 +8,32 @@
 #include <pthread.h>
 using namespace std;
 
+
+// 饿汉单列模式，本身线程安全
+class Singleton_e {
+public:
+    static Singleton_e* get_instance() {
+        return instance;
+    }
+
+    static Singleton_e* get_instance1() {
+        return &e_instance;
+    }
+
+private:
+    static Singleton_e* instance;
+    static Singleton_e e_instance; // 静态变量
+    Singleton_e() {}
+    ~Singleton_e() {}
+
+    Singleton_e(const Singleton_e&) {}
+    Singleton_e& operator=(const Singleton_e&) {}
+};
+
+Singleton_e* Singleton_e::instance = new (std::nothrow) Singleton_e();
+
+
+// 线程安全，懒汉单列模式
 class Singleton {
 public:
     static Singleton* get_instance() {
