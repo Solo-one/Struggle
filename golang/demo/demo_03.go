@@ -1,5 +1,11 @@
 package main
-import "fmt"
+//import "fmt"
+//import "math"
+import (
+    "math" 
+    "fmt"
+)
+
 
 func main() {
     var a int = 10;
@@ -12,13 +18,19 @@ func main() {
     fmt.Printf("%v, %v\n", a, b)
 
     
-    // 简介方法
+    // 简洁方法
     c := 100
     d := 200
 
     fmt.Printf("%v, %v\n", c, d)
-    c, d = d, c 
+    c, d = d, c // 直接交互 
     fmt.Printf("%v, %v\n", c, d)
+
+    // 实参函数, 申明函数变量
+    getSquareRoot := func(x float64) float64 {
+        return math.Sqrt(x)
+    }
+    fmt.Println(getSquareRoot(9))
 }
 
 func swap(x *int, y *int) {
@@ -27,3 +39,5 @@ func swap(x *int, y *int) {
     *x = *y
     *y = temp
 }
+
+
