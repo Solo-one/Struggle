@@ -192,6 +192,7 @@ void merge(int array[], int* left, int left_size, int* right, int right_size) {
  * 平均时间复杂度：O(nlogn)
  * 空间复杂度：O(logn)
  * 应用：快速排序使用分治法,实际应用比较多
+ * 面试中可能考察如何优化，基准的选取？
  */
 void quick_sorting(int array[], int low, int high) {
     if (low < high) {
