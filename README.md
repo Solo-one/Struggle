@@ -1,2 +1,2 @@
 # Struggle
-growth, take your time.
+growth, take your time...
